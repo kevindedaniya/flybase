@@ -24,19 +24,23 @@ class Box extends React.Component {
 		let direction;
 		
 		switch(event.keyCode) {
-			case 87:
+			case 87: // w key code
+			case 38: // up arrow key code
 				direction = 'top';
 				steps = -1;
 				break;
-			case 83:
+			case 83: // s key code
+			case 40: // down arrow key code
 				direction = 'top';
 				steps = 1;
 				break;
-			case 65:
+			case 65: // a key code
+			case 37: // left arrow key code
 				direction = 'left';
 				steps = -1;
 				break;
-			case 68:
+			case 68: // d key code
+			case 39: // right arrow key code
 				direction = 'left';
 				steps = 1;
 				break;
@@ -58,10 +62,9 @@ class Box extends React.Component {
 			if(steps > 0 && direction === 'left' && !((initialDistance + steps) < (parentDiv.offsetWidth - event.target.offsetWidth))) {
 				return;
 			}
+
 			event.target.style[direction] = `${initialDistance + steps}px`; 
 		}
-
-		return;
 	}
 
 	render() {
