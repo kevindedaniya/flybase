@@ -1,0 +1,26 @@
+.playarea
+    position: fixed
+    top: 50%
+    left: 50%
+    margin-right: 50% 
+    transform: translate(-50%, -50%)
+    &__container
+        width: 80vw
+        height: 80vh
+        margin-top: 5vh
+        border: 1px dashed #aaa
+        position: relative
+    &__button
+        border: 0
+        padding: 0.7em
+        border-radius: 0
+        outline: 0
+        background-color: #eee
+        border: 1px solid transparent
+        cursor: pointer
+        margin-right: 2em
+        font-size: 1.05em
+        &:active
+            border: 1px solid #aaa
+        &:focus
+            background-color: #e5e5e5
