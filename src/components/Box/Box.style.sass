@@ -1,0 +1,32 @@
+.box
+    position: absolute
+    width: 5em
+    height: 5em
+    margin: 0
+    border: 1px solid #aaa
+    background-color: #fff
+    &:focus, &:active
+        border: 1px solid #000
+        background-color: #fcfcfc
+        border-radius: 0
+        outline: none
+    &:focus .box__button
+        display: block
+    &__button
+        display: none
+        position: absolute
+        border: 0px
+        top: 4px
+        right: 4px
+        border-radius: 50%
+        background-color: #eee
+        color: #000
+        padding: 0 0.3em
+        font-size: 1.1em
+        cursor: pointer
+        &:active
+            display: block
+        &:focus
+            outline: none
+            background-color: #000
+            color: #fff
